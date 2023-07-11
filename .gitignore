@@ -10,6 +10,8 @@
 /wp-content/languages
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
+/wp-content/themes/sdis-chamberonne/node_modules/
+/wp-content/themes/sdis-chamberonne/dist/
 /wp-includes/
 /index.php
 /license.txt
@@ -46,3 +48,6 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+
+# IDEA files
+/.idea/

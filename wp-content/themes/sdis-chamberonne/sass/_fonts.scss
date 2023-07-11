@@ -1,0 +1,151 @@
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+} 
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-SemiBoldItalic.ttf') format('truetype');
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-BoldItalic.ttf') format('truetype');
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+	font-weight: 900;
+	font-style: italic;
+}
+
+
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-ExtraLight.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?fgc4ld');
+  src:  url('../fonts/icomoon/icomoon.eot?fgc4ld#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?fgc4ld') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?fgc4ld') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?fgc4ld#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-signs:before {
+  content: "\e906";
+}
+.icon-multimedia-option:before {
+  content: "\e900";
+}
+.icon-mail:before {
+  content: "\e901";
+}
+.icon-ml-close:before {
+  content: "\e902";
+  color: #eb061e;
+}
+.icon-pdf:before {
+  content: "\e903";
+}
+.icon-picture:before {
+  content: "\e904";
+}
+.icon-profile:before {
+  content: "\e905";
+  color: #eb061e;
+}

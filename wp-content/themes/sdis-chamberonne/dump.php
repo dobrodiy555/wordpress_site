@@ -138,3 +138,5 @@
 <!--//wp_enqueue_script( 'sdis-main', get_template_directory_uri() . '/src/js/main.js', array('jquery'), null, true );-->
 <!--//wp_enqueue_script( 'sdis-slider', get_template_directory_uri() . '/src/js/function_slider.js', array('jquery', 'sdis-main'), null, true );-->
 <!--//wp_enqueue_script( 'sdis_script', get_stylesheet_directory_uri() . '/dist/scripts.js', array('jquery'), null, true );-->
+
+<!-- echo "bla"; -->

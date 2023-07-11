@@ -15,3 +15,5 @@ echo "<br>";
 <a href="<?php echo site_url(); ?>">Link</a>
 
 <a href="<?php get_site_url(); ?>">Link</a>
+
+<p>bla bla bla bla</p>

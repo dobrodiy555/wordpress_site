@@ -77,83 +77,51 @@
 						<div class="cont">
 							<div class="info">
 								<div class="title">
-									<h4>Prochaines activités</h4>
+									<h4><?php _e('Prochaines activités', 'sdis'); ?></h4>
 								</div>
-                <?php $posts = get_posts( array(
+                <?php $today = current_time('Y-m-d');
+                $posts = get_posts( array(
                         'post_type' => 'activites',
+                        'post_status' => 'any',
                         'order' => 'ASC',
-                        'meta_query' => array(
+                        'orderby' => 'date',
+                        'date_query' => array(
                                 array(
-                                        'key' => 'date',
-                                        'value' => date('Y-m-d H:i:s'),
-                                        'compare' => '>='
+                                        'after' => $today,
+                                        'inclusive' => true,
                                 )
                         )
-                )); ?>
-                
+                ) ); ?>
+
 								<div class="list-alarms">
                   <?php if ($posts) :
                     foreach ($posts as $post) :
-                      $activ_date = date('d.m.Y', strtotime(get_field('date')) ); ?>
+                      $activ_date = get_the_date('d.m.Y' ); ?>
                       	<div class="row">
-                          <?php if (has_post_thumbnail()) { ?>
+                          <?php if ( has_post_thumbnail() ) { ?>
                             <i class="icon icon-picture"></i>
                           <?php } ?>
                           <span class="date"><?php echo $activ_date;?></span>
-                          <span class="text"><?php the_title(); ?></span>
+                          <a href="<?php the_permalink(); ?>"><span class="text"><?php the_title(); ?></span></a>
                         </div>
-                    <?php endforeach; ?>
-                  <?php endif; ?>
+                    <?php endforeach;
+                  endif;
+                  wp_reset_postdata(); ?>
                 </div>
                   
 								<div class="block-btn">
-									<a href="<?php echo get_post_type_archive_link('activites'); ?>" class="btn">Toutes les activités</a>
+									<a href="<?php echo get_post_type_archive_link('activites'); ?>" class="btn"><?php _e('Toutes les activités', 'sdis'); ?></a>
 								</div>
 							</div>
 						</div>
-           
 
-          
-            <!--past alarmes-->
-						<div class="cont">
-							<div class="info">
-								<div class="title">
-									<h4>Dernières alarmes</h4>
-								</div>
-                <?php $posts = get_posts( array(
-                        'post_type' => 'alarme',
-                        'order' => 'DESC',
-                        'numberposts' => 5, // as default
-                        'meta_query' => array(
-                                array(
-                                        'key' => 'date',
-                                        'value' => date('Y-m-d H:i:s'),
-                                        'compare' => '<='
-                                )
-                        )
-                ));
-                ?>
-								<div class="list-alarms">
-                  <?php if ($posts) :
-                    foreach ($posts as $post) :
-                      $alarm_date = date('d.m.Y', strtotime(get_field('date')) ); ?>
-                      <div class="row">
-                        <?php if (has_post_thumbnail()) { ?>
-                          <i class="icon icon-picture"></i>
-                        <?php } ?>
-                        <span class="date"><?php echo $alarm_date;?></span>
-                        <span class="text"><?php the_title(); ?></span>
-                      </div>
-                    <?php endforeach; ?>
-                  <?php endif; ?>
-                </div>
-			
-								<div class="block-btn">
-									<a href="<?php echo get_post_type_archive_link('alarme'); ?>" class="btn">Toutes les alarmes</a>
-								</div>
-        
-							</div>
-						</div>
+            <!--past alarms shortcode-->
+            <div class="cont">
+              <div class="info">
+            <?php echo do_shortcode('[past_alarms]'); ?>
+              </div>
+            </div>
+            
 					</aside>
 				</div>
 			</div>

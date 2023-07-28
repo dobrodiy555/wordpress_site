@@ -18,14 +18,14 @@ jQuery(document).ready(function($){
   //   e.preventDefault();
   //   $('.cart-tabs a').removeClass('active');
   //   $(this).addClass('active');
-  //   // $(this)
-  //   // .closest('.block-tabs')
-  //   // .find('.cart-tabs__item--active')
-  //   // .removeClass('cart-tabs__item--active')
-  //   // .hide();
-  //   // $($(this.hash)).fadeIn(300, function () {
-  //   //   $(this).addClass('cart-tabs__item--active');
-  //   // });
+  //   $(this)
+  //   .closest('.block-tabs')
+  //   .find('.cart-tabs__item--active')
+  //   .removeClass('cart-tabs__item--active')
+  //   .hide();
+  //   $($(this.hash)).fadeIn(300, function () {
+  //     $(this).addClass('cart-tabs__item--active');
+  //   });
   // });
 
 

@@ -1,4 +1,11 @@
+# Webpack
+/node_modules/
+package.json
+package-lock.json
+webpack.config.js
+
 # polygon, dump
 pol.php
 dump.php
 readme.txt
+

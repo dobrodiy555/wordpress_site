@@ -5,3 +5,9 @@ Description: French theme for practising
 Version: 1.0
 Text Domain: sdis
 */
+
+.cas-click.active {
+    background: #fff;
+    color: #eb061e;
+}
+

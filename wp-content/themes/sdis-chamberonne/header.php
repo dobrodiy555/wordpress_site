@@ -32,33 +32,26 @@
             </div>
             <div class="wrap">
                 <div class="flex">
-                    <a href="<?php echo home_url(); ?>" class="logo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/logo-main.svg" alt="" />
-                    </a>
+
+                  
+                  <?php // display image that was uploaded in Appearance->SDIS banners
+                  $attachment_id = get_option('sdis_upper_banner');
+                  $image_attributes = wp_get_attachment_image_src( $attachment_id );
+                  ?>
+                   <a href="<?php echo home_url(); ?>" class="logo">
+                     <?php if ($image_attributes) : ?>
+                    <img src="<?php echo $image_attributes[0];?>" />
+                     <?php endif; ?>
+                   </a>
+
+
                     <div class="action">
+
+                      <!--customize this nav menu in Appearance->Menus-->
                         <nav class="nav">
-                            <ul class="menu">
-                                <li class="item">
-                                    <a href="" class="link">Présentation</a>
-                                    <ul>
-                                        <li><a href="<?php echo get_site_url(); ?>/formation">Sites</a></li>
-                                        <li><a href="<?php echo site_url(); ?>/formation">Organisation</a></li>
-                                        <li><a href="<?php echo site_url(); ?>/formation">Missions</a></li>
-                                        <li><a href="<?php echo site_url(); ?>/formation">Formation</a></li>
-                                        <li><a href="<?php echo get_post_type_archive_link('vehicules'); ?>">Véhicules</a></li>
-                                    </ul>
-                                </li>
-                                <li class="item">
-                                    <a href="<?php echo get_post_type_archive_link('alarme'); ?>" class="link">Alarmes</a>
-                                </li>
-                                <li class="item">
-                                    <a href="<?php echo get_post_type_archive_link('activites'); ?>" class="link">Activités & divers</a>
-                                </li>
-                                <li class="item">
-                                    <a href="<?php echo site_url(); ?>/documents" class="link">Documents</a>
-                                </li>
-                            </ul>
+                          <?php wp_nav_menu( array('menu' => 'sdis_menu' ) ); ?>
                         </nav>
+
                         <a href="<?php echo site_url(); ?>/connexion" class="connect">
                             <i class="icon icon-profile"></i>
                             <span>Connexion</span>

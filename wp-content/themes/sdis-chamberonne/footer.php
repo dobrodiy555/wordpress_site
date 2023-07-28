@@ -1,9 +1,17 @@
     <footer class="footer">
         <div class="wrap">
             <div class="flex">
-                <a href="<?php echo home_url(); ?>/error" class="logo">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/logo-foot.svg" alt="" class="white" />
-                </a>
+
+                  <?php
+                  $attachment_id = get_option('sdis_lower_banner');
+                  $image_attributes = wp_get_attachment_image_src( $attachment_id );
+                  ?>
+                  <a href="<?php echo home_url(); ?>" class="logo">
+                    <?php if ($image_attributes) : ?>
+                      <img src="<?php echo $image_attributes[0];?>" />
+                    <?php endif; ?>
+                  </a>
+
                 <div class="footer-info">
                     <strong>SDIS Chamberonne</strong>
                     <span>Case postale 346</span> 
@@ -25,18 +33,18 @@
                 </div>
                 <div class="row">
                     <div class="input">
-                        <input type="text" placeholder="Your name">
+                        <input type="text" placeholder="<?php esc_html_e('Your name', 'sdis'); ?>">
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Your message">
+                        <input type="text" placeholder="<?php esc_html_e('Your message', 'sdis'); ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="input">
-                        <input type="text" placeholder="Your mail">
+                        <input type="text" placeholder="<?php esc_html_e('Your mail', 'sdis'); ?>">
                     </div>
                     <div class="block-btn">
-                        <button type="" class="fom-button">Send message</button>
+                        <button type="" class="fom-button"><?php esc_html_e('Send message', 'sdis'); ?></button>
                     </div>
                 </div>
             </form>

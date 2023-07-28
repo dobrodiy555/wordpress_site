@@ -119,35 +119,8 @@ get_header(); ?>
 						<a href="<?php echo get_post_type_archive_link('activites'); ?>" class="btn">Toutes les activités</a>
 					</div>
 					<div class="item-area">
-						<div class="title">
-							<h2>Dernières alarmes</h2>
-						</div>
-						<div class="list-alarms cont">
-							<div class="row">
-								<i class="icon icon-picture"></i>
-								<span class="date">13.02.20</span>
-								<span class="text">Sauvetage 008</span>
-							</div>
-							<div class="row">
-								<span class="date">12.02.20</span>
-								<span class="text">Alarme automatique 007</span>
-							</div>
-							<div class="row">
-								<span class="date">113.02.20</span>
-								<span class="text">Feu 006</span>
-							</div>
-							<div class="row">
-								<i class="icon icon-picture"></i>
-								<span class="date">10.02.20</span>
-								<span class="text">Inondation 005</span>
-							</div>
-							<div class="row">
-								<i class="icon icon-picture"></i>
-								<span class="date">10.02.20</span>
-								<span class="text">Prévention feu 004</span>
-							</div>
-						</div>
-						<a href="<?php echo get_post_type_archive_link('alarme'); ?>" class="btn">Toutes les alarmes</a>
+            <!--past alarms shortcode-->
+            <?php echo do_shortcode('[past_alarms]'); ?>
 					</div>
 					<div class="item-area">
 						<div class="title">
